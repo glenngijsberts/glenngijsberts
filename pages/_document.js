@@ -1,7 +1,3 @@
-// _document is only rendered on the server side and not on the client side
-// Event handlers like onClick can't be added to this file
-
-// ./pages/_document.js
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 class MyDocument extends Document {
@@ -14,7 +10,11 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          {/* Favicon */}
           <link rel="icon" href="/favicon.ico" />
+
+          {/* Font */}
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/inter-ui@3.11.0/inter.min.css"></link>
         </Head>
         <body>
           <Main />
