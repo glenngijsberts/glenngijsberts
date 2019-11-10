@@ -1,7 +1,8 @@
 const colors = {
-  black: '#303030',
+  black: '#3c424f',
   lightGrey: '#f7f7f7',
-  primary: '#e91e63',
+  darkblue: '#6278a7',
+  primary: '#3c424f',
 }
 
 export { colors }

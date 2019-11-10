@@ -6,7 +6,7 @@ import { colors } from '../../styles/theme'
 const baseTextStyles = css`
   font-weight: ${fontWeight.regular};
   line-height: ${lineHeight.copy};
-  color: ${colors.black};
+  color: ${colors.darkblue};
   font-size: ${fontSize[16]};
   @media ${device.tablet} {
     font-size: ${fontSize[18]};
