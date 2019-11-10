@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { NextSeo } from 'next-seo'
-import { H1, H4, H3, H2, H6, Avatar, color, space, device, Banner } from '@ticketswap/solar'
+import { H1, H4, H3, H2, H6, Avatar, color, space, device, Banner, Image } from '@ticketswap/solar'
 import { colors } from '../styles/theme'
 import Content from '../components/Content'
 import Container from '../components/Container'
 import socials from '../content/socials'
 import skills from '../content/skills'
+import cases from '../content/cases'
 
 const SubTitle = styled(H4)`
   color: ${colors.primary};
@@ -136,6 +137,48 @@ const InfoBlock = styled.article`
   }
 `
 
+const Portfolio = styled.section`
+  padding-top: 48px;
+  padding-bottom: 48px;
+  width: 100%;
+
+  h2 {
+    font-size: 48px;
+    color: ${colors.primary};
+    margin-bottom: 32px;
+  }
+`
+
+const Cases = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 32px;
+
+  @media ${device.tablet} {
+    grid-template-columns: 1fr 1fr;
+  }
+`
+
+const Case = styled.article`
+  h3 {
+    font-weight: bold;
+    color: ${colors.primary};
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+
+  p {
+    color: ${colors.black};
+    text-align: justify;
+    font-size: 16px;
+    line-height: 36px;
+  }
+`
+
+const StyledImage = styled(Image)`
+  margin-bottom: 32px;
+`
+
 export default () => (
   <>
     <NextSeo
@@ -158,7 +201,7 @@ export default () => (
     <Content>
       <Header>
         <StyledAvatar src="/img/glenngijsberts.jpg" size={120} />
-        <Title>Glenn Gijsberts</Title>
+        <Title>Glenn Gijsberts 👨‍💻</Title>
         <SubTitle>Interaction Design student & Front-end developer</SubTitle>
 
         <StyledText>
@@ -206,5 +249,21 @@ export default () => (
         </Info>
       </Container>
     </About>
+
+    <Portfolio>
+      <Container>
+        <H2>Portfolio</H2>
+
+        <Cases>
+          {cases.map(({ image, title, text }, index) => (
+            <Case>
+              <StyledImage src={image} rounded />
+              <H3>{title}</H3>
+              <p>{text}</p>
+            </Case>
+          ))}
+        </Cases>
+      </Container>
+    </Portfolio>
   </>
 )
