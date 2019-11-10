@@ -1,13 +1,15 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { NextSeo } from 'next-seo'
-import { H1, H4, H3, H2, H6, Avatar, color, space, device, Banner, Image } from '@ticketswap/solar'
+import { H1, H4, H3, H2, H6, Avatar, space, device, Banner, Image } from '@ticketswap/solar'
 import { colors } from '../styles/theme'
 import Content from '../components/Content'
 import Container from '../components/Container'
 import socials from '../content/socials'
 import skills from '../content/skills'
 import cases from '../content/cases'
+import Fade from 'react-reveal/Fade'
+import Link from 'next/link'
 
 const SubTitle = styled(H4)`
   color: ${colors.primary};
@@ -200,41 +202,45 @@ export default () => (
 
     <Content>
       <Header>
-        <StyledAvatar src="/img/glenngijsberts.jpg" size={120} />
-        <Title>Glenn Gijsberts 👨‍💻</Title>
-        <SubTitle>Interaction Design student & Front-end developer</SubTitle>
+        <Fade bottom>
+          <StyledAvatar src="/img/glenngijsberts.jpg" size={120} />
+          <Title>Glenn Gijsberts 👨‍💻</Title>
+          <SubTitle>Interaction Design student & Front-end developer</SubTitle>
 
-        <StyledText>
-          Als student Communication & Multimedia Design ben ik bezig met het ontwerpen van gebruiksvriendelijke (online)
-          producten. Naast mijn studie werk ik als Front-end developer bij{' '}
-          <A href="https://www.ticketswap.com" target="_blank">
-            TicketSwap
-          </A>
-          , waar ik meewerk in een multidisciplinair team van ontwerpers en developers.
-        </StyledText>
+          <StyledText>
+            Als student Communication & Multimedia Design ben ik bezig met het ontwerpen van gebruiksvriendelijke
+            (online) producten. Naast mijn studie werk ik als Front-end developer bij{' '}
+            <A href="https://www.ticketswap.com" target="_blank">
+              TicketSwap
+            </A>
+            , waar ik meewerk in een multidisciplinair team van ontwerpers en developers.
+          </StyledText>
 
-        <Socials>
-          {socials.map(({ name, url }) => (
-            <Social>
-              <a href={url} target="_blank">
-                {name}
-              </a>
-            </Social>
-          ))}
-        </Socials>
+          <Socials>
+            {socials.map(({ name, url }, index) => (
+              <Social key={index}>
+                <a href={url} target="_blank">
+                  {name}
+                </a>
+              </Social>
+            ))}
+          </Socials>
+        </Fade>
       </Header>
 
-      <a href="">
+      <Link href="/afstuderen">
         <StyledBanner>
           <H2>Help mij!</H2>
           <p>Ik ben op zoek naar een afstudeerstage. Kan jij me verder helpen?</p>
         </StyledBanner>
-      </a>
+      </Link>
 
-      <Contact>
-        <H6>Contact</H6>
-        <a href="mailto:glenngijsberts95@gmail.com">glenngijsberts95@gmail.com</a>
-      </Contact>
+      <Fade bottom>
+        <Contact>
+          <H6>Contact</H6>
+          <a href="mailto:glenngijsberts95@gmail.com">glenngijsberts95@gmail.com</a>
+        </Contact>
+      </Fade>
     </Content>
 
     <About>
@@ -256,7 +262,7 @@ export default () => (
 
         <Cases>
           {cases.map(({ image, title, text }, index) => (
-            <Case>
+            <Case key={index}>
               <StyledImage src={image} rounded />
               <H3>{title}</H3>
               <p>{text}</p>
