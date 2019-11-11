@@ -70,7 +70,7 @@ export default () => (
         title: 'Glenn Gijsberts - Afstuderen',
         description: 'Ik ben op zoek naar een afstudeerstage - Glenn Gijsberts',
         images: [{ url: 'https://glenngijsberts.now.sh/img/glenngijsberts.jpg' }],
-        site_name: 'Glenn Gijsberts Portfolio',
+        site_name: 'Op zoek naar een afstudeerstage - Glenn Gijsberts',
       }}
       twitter={{
         handle: '@glenngijsberts',
@@ -106,7 +106,7 @@ export default () => (
 
         <Paragraph>
           In de afgelopen 3,5 jaar heb ik kennis gemaakt met Interaction Design. Tijdens de studie heb ik meer te leren
-          gekregen over onderzoek doen, het bedenken van concepten, het uitwerken concepten naar ontwerpen en het
+          gekregen over onderzoek doen, het bedenken van concepten, het uitwerken van concepten naar ontwerpen en het
           realiseren van High-Fi prototypes. Daarnaast heb ik geleerd om deze prototypes te testen. Tijdens dit proces
           staat vooral de gebruiker centraal.
         </Paragraph>
