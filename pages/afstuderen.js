@@ -135,7 +135,7 @@ export default () => (
 
         <Info>
           <InfoBlock>
-            <H5>Comptenenties</H5>
+            <H5>Competenties</H5>
             <p>Onderzoeken</p>
             <p>Conceptualisern</p>
             <p>Visualiseren en prototypes maken</p>
