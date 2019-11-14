@@ -133,7 +133,7 @@ const InfoBlock = styled.article`
   }
 
   p {
-    text-align: justify;
+    text-align: left;
     font-size: 16px;
     color: white;
   }
